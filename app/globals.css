@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    /* --primary: 220.9 39.3% 11%; */
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%; /* This is a light gray color */
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    /* --border: 220 13% 91%; */
+    --border: 220 13% 91%;
+
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --blue: #b0d3d6;
+    --darkblue: #577c7c;
+    --taupe: #eadcca;
+    --darktaupe: #a39c8d;
+    --gray: #d8d8d8;
+    --darkgray: #8e8e8e;
+    --purple: #a19fb7;
+    --darkpurple: #5f5e72;
+    --black: "#131a1c";
+    --offwhite: "#fdfcf7";
+    --white: "#fff";
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+@font-face {
+  font-family: "Arial Nova";
+  src: local("Arial_Nova"), url("@/assets/fonts/Arial_Nova/Arial_Nova.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("@/assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Light"), url("@/assets/fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Bold"), url("@/assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Black"), url("@/assets/fonts/Poppins/Poppins-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins ExtraBold"),
+    url("@/assets/fonts/Poppins/Poppins-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Italic"), url("@/assets/fonts/Poppins/Poppins-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins SemiBold"),
+    url("@/assets/fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Thin"), url("@/assets/fonts/Poppins/Poppins-Thin.ttf");
+  font-weight: 100;
+}
+
+body {
+  font-family: "Arial Nova", sans-serif;
+  font-size: 12px;
+  background-color: var(--white);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--darkblue);
+  font-weight: 500;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.gradient-background {
+  background: linear-gradient(50deg, #577c7c, #b0d3d6 50%, #b0d3d6, #8e8e8e);
+}
+
+.gradient-background-light {
+  background: linear-gradient(50deg, white, var(--taupe), var(--gray));
+}
